@@ -1,0 +1,45 @@
+{% extends 'home.html' %}
+
+
+{% block content %}
+
+    <h1 class="text-center">出版社列表</h1>
+    <a href="{% url 'publish_add' %}" class="btn btn-success pull-left">添加出版社</a>
+
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>名称</th>
+                <th>地址</th>
+                <th>邮箱</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for publish in publish_list %}
+                <tr>
+                    <td>{{ publish.pk }}</td>
+                    <td>{{ publish.name }}</td>
+                    <td>{{ publish.address }}</td>
+                    <td>{{ publish.email }}</td>
+                    <td>
+                        <a href="{% url 'publish_edit' publish_id=publish.pk %}">编辑</a>
+                        <a href="{% url 'publish_delete' delete_id=publish.pk %}">删除</a>
+                    </td>
+                </tr>
+            {% endfor %}
+
+                
+                
+                
+
+            
+
+        </tbody>
+
+    </table>
+
+
+{% endblock %}
