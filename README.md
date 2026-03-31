@@ -109,3 +109,4 @@ http://localhost:8000
 
 **项目位置**: `c:\Users\lenovo\Desktop\DjangoProject2_book`  
 **创建日期**: 2026-03-31
+希望大家多多点赞
